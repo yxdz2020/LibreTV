@@ -10,6 +10,11 @@ jobs:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
     if: ${{ github.event.repository.fork }}
+    # 新增 permissions，允许工作流修改其自身和内容
+    permissions:
+      contents: write
+      pull-requests: write
+      workflows: write
 
     steps:
       # Step 1: run a standard checkout action
@@ -39,4 +44,4 @@ jobs:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
           retain_days: 0
-          keep_minimum_runs: 50  
+          keep_minimum_runs: 50
