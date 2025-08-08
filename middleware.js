@@ -32,15 +32,10 @@ export default async function middleware(request) {
   }
   
   // 替换密码占位符
-  let modifiedHtml = originalHtml
-    .replace(
-      'window.__ENV__.PASSWORD = "{{PASSWORD}}";',
-      `window.__ENV__.PASSWORD = "${passwordHash}"; // SHA-256 hash`
-    )
-    .replace(
-      'window.__ENV__.ADMINPASSWORD = "{{ADMINPASSWORD}}";',
-      'window.__ENV__.ADMINPASSWORD = ""; // ADMINPASSWORD 功能已移除'
-    );
+  let modifiedHtml = originalHtml.replace(
+    'window.__ENV__.PASSWORD = "{{PASSWORD}}";',
+    `window.__ENV__.PASSWORD = "${passwordHash}"; // SHA-256 hash`
+  );
 
   // 修复Response构造
   return new Response(modifiedHtml, {

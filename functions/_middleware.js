@@ -16,10 +16,6 @@ export async function onRequest(context) {
     }
     html = html.replace('window.__ENV__.PASSWORD = "{{PASSWORD}}";', 
       `window.__ENV__.PASSWORD = "${passwordHash}";`);
-
-    // 移除 ADMINPASSWORD 占位符
-    html = html.replace('window.__ENV__.ADMINPASSWORD = "{{ADMINPASSWORD}}";',
-      'window.__ENV__.ADMINPASSWORD = "";');
     
     return new Response(html, {
       headers: response.headers,

@@ -60,8 +60,6 @@ async function renderPage(filePath, password) {
   } else {
     content = content.replace('{{PASSWORD}}', '');
   }
-  // 移除 ADMINPASSWORD 占位符
-  content = content.replace('{{ADMINPASSWORD}}', '');
   return content;
 }
 

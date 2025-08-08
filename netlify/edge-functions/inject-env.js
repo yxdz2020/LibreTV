@@ -35,15 +35,10 @@ export default async (request, context) => {
     passwordHash = await sha256(password);
   }
   
-  const modifiedHtml = originalHtml
-    .replace(
-      'window.__ENV__.PASSWORD = "{{PASSWORD}}";',
-      `window.__ENV__.PASSWORD = "${passwordHash}"; // SHA-256 hash`
-    )
-    .replace(
-      'window.__ENV__.ADMINPASSWORD = "{{ADMINPASSWORD}}";',
-      'window.__ENV__.ADMINPASSWORD = ""; // ADMINPASSWORD 功能已移除'
-    );
+  const modifiedHtml = originalHtml.replace(
+    'window.__ENV__.PASSWORD = "{{PASSWORD}}";',
+    `window.__ENV__.PASSWORD = "${passwordHash}"; // SHA-256 hash`
+  );
   
   // Create a new response with the modified HTML
   return new Response(modifiedHtml, {
