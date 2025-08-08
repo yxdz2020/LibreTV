@@ -10,7 +10,7 @@ jobs:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
     if: ${{ github.event.repository.fork }}
-    # 新增 permissions，允许工作流修改其自身和内容
+    # 确保 permissions 字段的缩进和 runs-on、if 相同
     permissions:
       contents: write
       pull-requests: write
@@ -37,7 +37,7 @@ jobs:
           echo "[Error] Due to a change in the workflow file of the upstream repository, GitHub has automatically suspended the scheduled automatic update. You need to manually sync your fork."
           exit 1
 
-        # 删除旧的工作流运行记录
+      # 删除旧的工作流运行记录
       - name: 🎉 Delete old workflow run
         uses: yxdz2020/delete-workflow-runs@v20250609
         with:
