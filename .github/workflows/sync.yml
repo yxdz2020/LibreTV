@@ -1,4 +1,8 @@
 name: Upstream Sync
+permissions:
+  contents: write
+  pull-requests: write
+  workflows: write
 
 on:
   schedule:
@@ -10,11 +14,7 @@ jobs:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
     if: ${{ github.event.repository.fork }}
-    permissions:
-      contents: write
-      pull-requests: write
-      workflows: write
-
+    # 移除这里的 permissions 配置，因为它现在在顶层配置
     steps:
       # Step 1: run a standard checkout action
       - name: Checkout target repo
