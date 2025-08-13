@@ -115,16 +115,12 @@ const API_SITES = {
     name: '量子资源站'
   },
   subo: {
-    api: 'https://subocj.com/api.php/provide/vod',
+    api: 'https://subocj.com/api.php/provide/vod/',
     name: '速播资源'
   },
   ukuzy: {
     api: 'https://api.ukuapi88.com/api.php/provide/vod/',
     name: 'u酷资源'
-  },
-  fczy: {
-    api: 'https://api.fczy888.me/api.php/provide/vod',
-    name: '蜂巢资源'
   },
   ckzy: {
       api: 'https://ckzy.me/api.php/provide/vod/',
