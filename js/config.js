@@ -46,12 +46,12 @@ const API_SITES = {
   ffzy: {
     api: 'http://ffzy5.tv/api.php/provide/vod',
     name: '非凡影视',
-    detail: 'http://ffzy5.tv', 
+    detail: 'http://ffzy5.tv',
   },
   heimuer: {
     api: 'https://json.heimuer.xyz/api.php/provide/vod',
     name: '黑木耳',
-    detail: 'https://heimuer.tv', 
+    detail: 'https://heimuer.tv',
   },
   zy360: {
     api: 'https://360zy.com/api.php/provide/vod',
@@ -88,48 +88,43 @@ const API_SITES = {
   },
   zuid: {
     api: 'https://api.zuidapi.com/api.php/provide/vod',
-    name: '最大资源'
+    name: '最大资源',
   },
   yinghua: {
     api: 'https://m3u8.apiyhzy.com/api.php/provide/vod',
-    name: '樱花资源'
+    name: '樱花资源',
   },
   baidu: {
     api: 'https://api.apibdzy.com/api.php/provide/vod',
-    name: '百度云资源'
+    name: '百度云资源',
   },
   wujin: {
     api: 'https://api.wujinapi.me/api.php/provide/vod',
-    name: '无尽资源'
+    name: '无尽资源',
   },
   wwzy: {
     api: 'https://wwzy.tv/api.php/provide/vod',
-    name: '旺旺短剧'
+    name: '旺旺短剧',
   },
   ikun: {
     api: 'https://ikunzyapi.com/api.php/provide/vod',
-    name: 'iKun资源'
+    name: 'iKun资源',
   },
   lzi: {
     api: 'https://cj.lziapi.com/api.php/provide/vod/',
-    name: '量子资源站'
+    name: '量子资源站',
   },
   subo: {
     api: 'https://subocj.com/api.php/provide/vod/',
-    name: '速播资源'
+    name: '速播资源',
   },
   ukuzy: {
     api: 'https://api.ukuapi88.com/api.php/provide/vod/',
-    name: 'u酷资源'
+    name: 'u酷资源',
   },
   ckzy: {
       api: 'https://ckzy.me/api.php/provide/vod/',
       name: 'CK资源',
-      adult: true
-  },
-  huangcang: {
-      api: 'https://hsckzy888.com/api.php/provide/vod',
-      name: '黄色仓库',
       adult: true
   },
   testSource: {
